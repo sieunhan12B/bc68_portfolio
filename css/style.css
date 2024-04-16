@@ -1,0 +1,176 @@
+/* reset css  */
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+header .nav-link {
+  position: relative;
+  color: white;
+}
+
+header .navbar-nav .nav-link.active {
+  color: green !important;
+}
+
+header .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: green;
+}
+header .nav-link:hover::before {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+header .active::before {
+  width: 100%;
+}
+
+/* xuwre lí khi hover vào nội dung điều hướng sẽ đỏi màu chữ */
+header .nav-link:hover {
+  color: green !important;
+}
+
+/* carousel */
+.carousel .carousel-item .carousel-caption img {
+  width: 150px;
+  height: 150px;
+}
+
+.carousel .carousel-caption {
+  /* left: 50%;
+  top: 50%; */
+  /* transform nhận giá trị -âm cho 2 chiều giúp đẩy ngược phần tử lại nhằm mục đích canh giữa phần tử  */
+  /* transform: translate(-50%);
+  right: unset;
+  bottom: unset; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: black; */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.available .available_bot {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .content_button ul {
+  justify-content: center;
+}
+
+.project .nav-pills .nav-link.active {
+  border-color: green;
+  background-color: green;
+}
+.project .nav-link {
+  color: black;
+  border: 1px solid #1a1d2d;
+}
+
+.project .project_item {
+  /* border-radius: 8px; */
+  /* background-color: pink; */
+  /* color: green; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.project .project_item img {
+  /* border radius với 4 giá trị sẽ đi theo hướng toplefft đi về tay phải  */
+  border-radius: 8px 8px 0 0;
+}
+
+.project .project_item:hover h3 {
+  color: green;
+}
+
+.project .project_item .project_text {
+  border: 1px solid transparent;
+  border-top: none;
+  transition: all 0.5s;
+  border-radius: 0 0 8px 8px;
+}
+
+.project .project_item:hover .project_text {
+  /* border: 1px solid green; */
+  border-color: green;
+}
+
+/* .project .row .gy-5 {
+  border-radius: 40px;
+}
+.project .row .gy-5:hover {
+  color: green;
+  border: 1px solid green;
+} */
+
+.feature__content .text-center .mt-5 .pt-3 {
+  background-image: url(./../image/3.jpg);
+  width: 100%;
+  height: 100%;
+}
+
+.available {
+  background-image: url(./../image/3.jpg);
+  color: white;
+  height: 90vh;
+  padding: 100px 0;
+  position: relative;
+}
+
+.available::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(7, 10, 12, 0.72);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.available .available_content .avai_item {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  padding: 40px;
+}
+
+/* lưu ý đặc biệt khi sử dụng maxwidth cho reponsive website:luôn để các giá trị max width lơn hơn nằm trên các giá trị nhỏ  */
+
+/* @media screen and (max-width: 1200px) {
+  .carousel h5 {
+    color: red;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .project_text {
+    background-color: orange;
+  }
+} */
+
+@media screen and (min-width: 576px) {
+  .carousel h5 {
+    color: red;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carousel h5 {
+    color: purple;
+  }
+}
